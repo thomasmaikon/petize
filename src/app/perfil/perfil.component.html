@@ -5,12 +5,12 @@
         <div class="perfil globalFont">
             <div class="justificate">
                 <div>
-                    <img src={{perfil.avatar_url}} alt="">
+                    <img src={{perfil.urlImagem}} alt="">
                 </div>
     
                 <div style="display: flex; flex-direction: column; padding: 5px;">
                     <div>
-                        <b> {{perfil.name}}</b>
+                        <b> {{perfil.nome}}</b>
                     </div>
                     <div style="color: #a0aec0;">
                         @{{perfil.login}}
@@ -18,19 +18,19 @@
                 </div>
             </div>
     
-            <p>{{perfil.bio}}</p>
+            <p>{{perfil.biografia}}</p>
             <div class="justificate">
                 <div class="icon-box">
                     <i class="fa-sharp fa-solid fa-people-group"></i>
                 </div>
-                <span>{{perfil.followers}} seguidores</span>
+                <span>{{perfil.qtdSeguidores}} seguidores</span>
             </div>
     
             <div class="justificate">
                 <div class="icon-box">
                     <i class="fa-solid fa-heart"></i>
                 </div>
-                <span>{{perfil.following}} seguindo</span>
+                <span>{{perfil.qtdSeguindo}} seguindo</span>
             </div>
 
 
@@ -38,35 +38,35 @@
                 <div class="icon-box">
                     <i class="fa-solid fa-briefcase"></i>
                 </div>
-                <span>{{perfil.company}} seguindo</span>
+                <span>{{perfil.empresaTrabalho}} seguindo</span>
             </div>
     
             <div class="justificate">
                 <div class="icon-box">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <span>{{perfil.location}}</span>
+                <span>{{perfil.localizacao}}</span>
             </div>
     
-            <div class="justificate">
+            <div class="justificate" *ngIf="perfil.email">
                 <div class="icon-box">
                     <i class="fa-solid fa-envelope"></i>
                 </div>
                 <span>{{perfil.email}}</span>
             </div>
     
-            <div class="justificate">
+            <div class="justificate" *ngIf="perfil.blogURL">
                 <div class="icon-box">
                     <i class="fa-solid fa-link"></i>
                 </div>
-                <span>{{perfil.blog}}</span>
+                <span>{{perfil.blogURL}}</span>
             </div>
     
-            <div class="justificate">
+            <div class="justificate" *ngIf="perfil.twitter">
                 <div class="icon-box">
                     <i class="fa-brands fa-twitter"></i>
                 </div>
-                <span>{{perfil.twitter_username}}</span>
+                <span>{{perfil.twitter}}</span>
             </div>
         </div>
 
@@ -77,28 +77,28 @@
 
     <div class="divRepositorios">
         <ul>
-            <li *ngFor="let r of repositorio">
+            <li *ngFor="let repositorio of repositorios">
                 <div>
                     <div class="nomeRepositorio" style="margin: 15px;">
-                       <a href="getUrl(r.name)">
-                            <b> {{ r.name }} </b>
+                       <a href="{{ getUrl(repositorio.nome) }}" target="_blank">
+                            <b> {{ repositorio.nome }} </b>
                         </a>
                     </div>
 
                     <div class="descricaoRepositorio" style="margin: 15px;">
-                       {{ r.description }}
+                       {{ repositorio.descricao }}
                     </div>
 
                     <div class="statusRepositorio">
                         <div class="icon-box">
                             <i class="fa-solid fa-star"></i>
                         </div>
-                        <span> {{ r.stargazers_count }} </span>
+                        <span> {{ repositorio.qtdEstrelas }} </span>
                         
                         <div class="icon-box">
                             <i class="fa-solid fa-circle fa-2xs" style="font-size: 4px;"></i>
                         </div>
-                        <span> Atualizado há 2 dias </span>
+                        <span> Atualizado há {{ repositorio.tempoPassado }} dias </span>
                     </div>
                     <hr>
                 </div>
