@@ -1,0 +1,89 @@
+.main {
+    background-color: #fcfcfc;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+
+.perfil {
+    background-color: gray;
+    max-width: 15em;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+}
+
+.mat-icon.inverted {
+    color: #ffffff;
+    
+    border-radius: 50%;
+    padding: 0.25rem;
+}
+
+.justificate {
+    display: flex;
+    align-items: center;
+}
+
+
+.repositorios {
+    margin-left: 50px;
+    background-color: gray;
+    width: 70%;
+    color: orange;
+}
+
+
+.nomeRepositorio {
+    padding: 5px;
+}
+
+.descricaoRepositorio {
+    padding: 5px;
+}
+
+
+.statusRepositorio {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.icon-box {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+hr {
+    width: 95%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.lateralEsquerdaDados {
+    display: flex;
+    
+    flex-direction: column;
+}
+
+.botaoContato {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}

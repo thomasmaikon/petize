@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.globalButtonStyle {
+    background-color: #8c19d2;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    width: 10em;
+    border: none;
+}

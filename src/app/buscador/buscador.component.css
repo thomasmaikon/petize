@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+.searchColor {
+    color: #0069ca;
+    font-size: 64px;
+}
+
+.devsColor {
+    color: #8c19d2;
+    font-size: 64px;
+}
+
+.inputStyled {
+    height: inherit;
+    width: inherit;
+    border: none;
+    color: #a0aec0;
+}
+
+.divSearch {
+    border: solid 1px #a0aec0;
+    width: 80%;
+    border-radius: 5px;
+    height: 25px;
+    padding: 4px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #a0aec0;
+}
+
+input:focus {
+    outline: none;
+}
+
+.searchButton:hover {
+    cursor: pointer;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: inherit;
+}
