@@ -53,6 +53,7 @@ img {
 
 .descricaoRepositorio {
     padding: 5px;
+    color: #a4a9b3;
 }
 
 
@@ -72,6 +73,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: #171923;
 }
 
 .lateralEsquerdaDados {
