@@ -5,6 +5,7 @@ import { RepositorioDTO } from '../entidades/Repositorio';
 import { DataServiceService } from '../service/data-service.service';
 import { ParserService } from '../service/parser.service';
 import { AlgoritmosService } from '../service/algoritmos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -17,7 +18,7 @@ export class PerfilComponent implements OnInit {
   perfil: PerfilDTO;
   repositorios: RepositorioDTO[];
 
-  constructor(private service: GithubServiceService, private parser: ParserService, private algoritmos: AlgoritmosService,perfil: PerfilDTO) {
+  constructor(private service: GithubServiceService, private parser: ParserService, private algoritmos: AlgoritmosService, private route: Router, perfil: PerfilDTO) {
     this.perfil = perfil
     this.repositorios = []
   }
@@ -50,5 +51,10 @@ export class PerfilComponent implements OnInit {
 
   getUrl(repositorio: string) {
     return `${this.urlGithub}/${this.perfil.login}/${repositorio}`
+  }
+
+
+  retornarMenu(){
+    this.route.navigate(['/']);
   }
 }
