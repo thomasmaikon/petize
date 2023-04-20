@@ -2,7 +2,7 @@
 
     <div class="lateralEsquerdaDados">
 
-        <div class="perfil">
+        <div class="perfil globalFont">
             <div class="justificate">
                 <div>
                     <img src={{perfil.avatar_url}} alt="">
@@ -28,11 +28,12 @@
     
             <div class="justificate">
                 <div class="icon-box">
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
                 </div>
                 <span>{{perfil.following}} seguindo</span>
             </div>
-    
+
+
             <div class="justificate">
                 <div class="icon-box">
                     <i class="fa-solid fa-briefcase"></i>
@@ -69,17 +70,19 @@
             </div>
         </div>
 
-        <div class="botaoContato">
-            <button class="globalButtonStyle"> Contato </button>
+        <div class="divBotaoContato" >
+            <button class="globalButtonStyle botaoContato"> <b>Contato</b> </button>
         </div>
     </div>
 
-    <div style="background-color: gray; margin-left: 30px;">
+    <div class="divRepositorios">
         <ul>
             <li *ngFor="let r of repositorio">
                 <div>
                     <div class="nomeRepositorio" style="margin: 15px;">
-                        <b> {{ r.name }} </b>
+                       <a href="getUrl(r.name)">
+                            <b> {{ r.name }} </b>
+                        </a>
                     </div>
 
                     <div class="descricaoRepositorio" style="margin: 15px;">

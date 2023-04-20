@@ -7,7 +7,8 @@ import { GithubServiceService } from '../service/github-service.service';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-
+  private urlGithub: string = "https://github.com";
+  
   perfil: any;
   repositorio: any;
 
@@ -34,4 +35,7 @@ export class PerfilComponent implements OnInit {
     }
    }
 
+  getUrl(repositorio: string) {
+    return `${this.urlGithub}/${this.perfil.name}/${repositorio}`;
+  }
 }

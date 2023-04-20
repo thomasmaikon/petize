@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
 .main {
     background-color: #fcfcfc;
     padding: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-family: 'M PLUS Rounded 1c', Courier, monospace;  
 }
 
 
@@ -21,6 +24,7 @@ img {
     display: flex;
     flex-direction: column;
     max-height: 400px;
+    background-color: #ffffff;
 }
 
 .mat-icon.inverted {
@@ -59,15 +63,6 @@ img {
     margin-left: 15px;
 }
 
-.icon-box {
-    width: 16px;
-    height: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-}
-
 hr {
     width: 95%;
 }
@@ -76,14 +71,29 @@ ul {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .lateralEsquerdaDados {
     display: flex;
     
     flex-direction: column;
 }
 
-.botaoContato {
+.divBotaoContato {
     margin-top: 100px;
     display: flex;
     justify-content: center;
+    width: 100%;
+}
+
+.botaoContato {
+    width: inherit;
+}
+
+.divRepositorios {
+    margin-left: 30px;
+    background-color: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

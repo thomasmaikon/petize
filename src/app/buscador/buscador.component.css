@@ -51,3 +51,7 @@ input:focus {
     flex-direction: column;
     width: inherit;
 }
+
+.buscadorButton{
+    margin-left: 50px;
+}

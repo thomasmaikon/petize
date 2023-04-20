@@ -1,17 +1,21 @@
 
-<div class="main">
+<div class="main globalFont">
     <div style="padding: 10px;">
-        <span class="searchColor"> Search </span> 
-        <span class="devsColor"> d_evs </span>
+        <span class="searchColor"> <b> Search </b>  </span> 
+        <span class="devsColor"> <b> d_evs </b> </span>
     </div>
 
     <div class="container">
         <div class="divSearch">
-            <mat-icon fontIcon="search" style="padding: 5px">  </mat-icon>
+            <div class="icon-box">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </div>
+            
             <input class="inputStyled" type="text" name="nome" id="nome" placeholder="Search" [(ngModel)]="nomeUsuario">
         </div>
     
-        <button class="globalButtonStyle" (click)="buscarUsuario()">Search</button>
+        <button class="globalButtonStyle buscadorButton"
+            (click)="buscarUsuario()"> <b>Search</b></button>
     </div>
 
 </div>
