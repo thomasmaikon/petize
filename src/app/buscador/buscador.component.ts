@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./buscador.component.css']
 })
 export class BuscadorComponent implements OnInit{
-  nomeUsuario: string = 'thomasmaikon';
+  nomeUsuario: string = '';
 
   pessoa: any = {};
 
@@ -22,14 +22,12 @@ export class BuscadorComponent implements OnInit{
 
   async buscarUsuario() {
     try {
-
       const sucesso = await this.service.buscaUsuarioPeloNome(this.nomeUsuario);
       if (sucesso) {
         this.route.navigate(['/perfil']);
       } else {
         // tratar erro
       }
-
     } catch (error) {
       // tratar erro, exibindo que usuario nao existe
     }
