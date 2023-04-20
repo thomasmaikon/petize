@@ -57,4 +57,8 @@ export class PerfilComponent implements OnInit {
   retornarMenu(){
     this.route.navigate(['/']);
   }
+
+  getTwitterLink(nome: string): string{
+    return `https://twitter.com/${nome}`;
+  }
 }
