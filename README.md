@@ -4,7 +4,7 @@ Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
 
 ## Projeto
 
-Para rodar em sua maquina este projeto siga os seguintes passos:
+Para rodar em sua maquina este projeto siga os seguintes passos:  
 1 - Instalar o node [NodeJS](https://nodejs.org/en) na versao latest, ao baixar o executaval, clicar nele e depois so em next, next next...
 
 2 - Dar um git clone no projeto ou baixar a versao zip, extrai-la e entrar no diretorio
