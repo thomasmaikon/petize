@@ -1,5 +1,10 @@
-<div class="main">
+<div class="icon-box ">
+    <button class="globalButtonStyle" (click)="retornarMenu()">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+</div>
 
+<div class="main">
     <div class="lateralEsquerdaDados">
 
         <div class="perfil globalFont">
@@ -7,8 +12,8 @@
                 <div>
                     <img src={{perfil.urlImagem}} alt="">
                 </div>
-    
-                <div style="display: flex; flex-direction: column; padding: 5px;">
+
+                <div class="informacoes">
                     <div>
                         <b> {{perfil.nome}}</b>
                     </div>
@@ -17,7 +22,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <p>{{perfil.biografia}}</p>
             <div class="justificate">
                 <div class="icon-box">
@@ -25,7 +30,7 @@
                 </div>
                 <span>{{perfil.qtdSeguidores}} seguidores</span>
             </div>
-    
+
             <div class="justificate">
                 <div class="icon-box">
                     <i class="fa-solid fa-heart"></i>
@@ -40,38 +45,49 @@
                 </div>
                 <span>{{perfil.empresaTrabalho}} seguindo</span>
             </div>
-    
+
             <div class="justificate">
                 <div class="icon-box">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <span>{{perfil.localizacao}}</span>
             </div>
-    
+
             <div class="justificate" *ngIf="perfil.email">
                 <div class="icon-box">
                     <i class="fa-solid fa-envelope"></i>
                 </div>
                 <span>{{perfil.email}}</span>
             </div>
-    
+
             <div class="justificate" *ngIf="perfil.blogURL">
                 <div class="icon-box">
                     <i class="fa-solid fa-link"></i>
                 </div>
-                <span>{{perfil.blogURL}}</span>
+                <span>
+                    <a href="{{perfil.blogURL}}" target="_blank">{{perfil.blogURL}}</a>
+                </span>
             </div>
-    
+
             <div class="justificate" *ngIf="perfil.twitter">
                 <div class="icon-box">
                     <i class="fa-brands fa-twitter"></i>
                 </div>
-                <span>{{perfil.twitter}}</span>
+                <span>
+                    <a href="{{getTwitterLink(perfil.twitter)}}" target="_blank"></a>
+                    @{{perfil.twitter}}
+                </span>
             </div>
         </div>
 
-        <div class="divBotaoContato" >
-            <button class="globalButtonStyle botaoContato"> <b>Contato</b> </button>
+        <div class="divBotaoContato">
+            <a class="anchorContato" href="mailto:exemplo@exemplo.com">
+                <button class="globalButtonStyle botaoContato">
+                    <b>
+                        Contato
+                    </b>
+                </button>
+            </a>
         </div>
     </div>
 
@@ -80,13 +96,13 @@
             <li *ngFor="let repositorio of repositorios">
                 <div>
                     <div class="nomeRepositorio" style="margin: 15px;">
-                       <a href="{{ getUrl(repositorio.nome) }}" target="_blank">
+                        <a href="{{ getUrl(repositorio.nome) }}" target="_blank">
                             <b> {{ repositorio.nome }} </b>
                         </a>
                     </div>
 
                     <div class="descricaoRepositorio" style="margin: 15px;">
-                       {{ repositorio.descricao }}
+                        {{ repositorio.descricao }}
                     </div>
 
                     <div class="statusRepositorio">
@@ -94,7 +110,7 @@
                             <i class="fa-solid fa-star"></i>
                         </div>
                         <span> {{ repositorio.qtdEstrelas }} </span>
-                        
+
                         <div class="icon-box">
                             <i class="fa-solid fa-circle fa-2xs" style="font-size: 4px;"></i>
                         </div>
