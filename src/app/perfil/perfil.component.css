@@ -24,6 +24,7 @@ img {
     flex-direction: column;
     max-height: 400px;
     background-color: #ffffff;
+    font-family: 'M PLUS Rounded 1c', Courier, monospace;  
 }
 
 .informacoes {

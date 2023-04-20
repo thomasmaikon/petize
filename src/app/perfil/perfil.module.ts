@@ -6,6 +6,7 @@ import { PerfilDTO } from '../entidades/Usuario';
 import { RepositorioDTO } from '../entidades/Repositorio';
 import { ParserService } from '../service/parser.service';
 import { AlgoritmosService } from '../service/algoritmos.service';
+
 @NgModule({
   declarations: [
     PerfilComponent
